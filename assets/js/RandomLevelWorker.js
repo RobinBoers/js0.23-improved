@@ -151,7 +151,7 @@ var RandomLevel = function () {
         this.tiles = [];//new Array(xSize*zSize*ySize);//[];
         this.fillQueue = [];
 
-        //console.log(this.random);
+        console.log(this.random);
 
         // grow
         this.grow = function(aint) {
@@ -221,7 +221,7 @@ var RandomLevel = function () {
 
             //this.progress(100);
             //System.out.println("LavaCount: " + i);
-            //console.log("LavaCount: " + i);
+            console.log("LavaCount: " + i);
         }
 
         // plant
@@ -392,14 +392,14 @@ var RandomLevel = function () {
                 --count;
                 var val = this.fillQueue[count];
                 //if (count == 0 && fillBuffer.size() > 0) {
-                /*if (count == 0 && fillBuffer.length > 0) {
-                    //System.out.println("IT HAPPENED!");
-                    console.log("IT HAPPENED!");
-                    //this.fillQueue = fillBuffer.remove(fillBuffer.size() - 1);
-                    this.fillQueue = fillBuffer.slice(fillBuffer.length-1);
+                // if (count == 0 && fillBuffer.length > 0) {
+                //     //System.out.println("IT HAPPENED!");
+                //     console.log("IT HAPPENED!");
+                //     //this.fillQueue = fillBuffer.remove(fillBuffer.size() - 1);
+                //     this.fillQueue = fillBuffer.slice(fillBuffer.length-1);
 
-                    count = this.fillQueue.length;
-                }*/
+                //     count = this.fillQueue.length;
+                // }
 
                 var z = val >> wBits & zMask;
                 var l2 = val >> wBits + hBits;
@@ -498,18 +498,13 @@ var RandomLevel = function () {
             return k2;
         }
 
-
-
-
-
-
         progress.string = "Raising..";
         //this.progressRenderer.progressStage("Raising..");
-        var distort = new Distort(new PerlinNoise(this.random, 8), new PerlinNoise(this.random, 8));
+        var distort = new Distort(new PerlinNoise(this.random * 2, 8), new PerlinNoise(this.random, 8));
         var distort1 = new Distort(new PerlinNoise(this.random, 8), new PerlinNoise(this.random, 8));
         var perlinnoise = new PerlinNoise(this.random, 8);
         var aint = [];
-        var f = 1.3;
+        var f = 1.3; //1.3
 
         var l;
         var i1;
@@ -542,8 +537,8 @@ var RandomLevel = function () {
         //this.progressRenderer.progressStage("Eroding..");
         var aint1 = aint;
 
-        distort1 = new Distort(new PerlinNoise(this.random, 8), new PerlinNoise(this.random, 8));
-        var distort2 = new Distort(new PerlinNoise(this.random, 8), new PerlinNoise(this.random, 8));
+        distort1 = new Distort(new PerlinNoise(this.random, 0), new PerlinNoise(this.random, 0));
+        var distort2 = new Distort(new PerlinNoise(this.random, 0), new PerlinNoise(this.random, 0));
 
         var j1;
         var k1;
@@ -634,7 +629,7 @@ var RandomLevel = function () {
                 f1 = ( f1 + Math.sin(f4) * Math.cos(f6));
                 f3 = ( f3 + Math.cos(f4) * Math.cos(f6));
                 f2 = ( f2 + Math.sin(f6));
-                f4 += f5 * 0.2;
+                f4 += f5 * 20; // 0.2
                 f5 = (f5 *= 0.9) + (random.nextFloat() - random.nextFloat());
                 f6 = (f6 + f7 * 0.5) * 0.5;
                 f7 = (f7 *= 0.9) + (random.nextFloat() - random.nextFloat());
@@ -736,14 +731,14 @@ var RandomLevel = function () {
 
 function startGeneration (obj) { //{worldSize: worldSize, seed: props.seed, seedrandom: seedrandom}
 	var level = new RandomLevel();
-	//console.log(level)
+	console.log(level)
 	var width = obj.worldSize;
 	var depth = obj.worldSize;
 	var height = 64;
-	level.createLevel(obj.seed, width, depth, height);
+	level.createLevel(71416045835628, width, depth, height); //obj.seed, 71876045834828 for testing
 }
 
 self.addEventListener('message', function(e) {
-  //console.log("worker get "+e.data);
+  console.log(e.data);
   startGeneration(e.data)
 }, false);
