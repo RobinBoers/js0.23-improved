@@ -9,7 +9,7 @@ function createWindow () {
     height: 600,
     toolbar: false, 
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'assets/js/preload.js')
     }
   })
 
@@ -21,7 +21,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Window icon
-  mainWindow.setIcon('icon.png');
+  mainWindow.setIcon('assets/icon.png');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
