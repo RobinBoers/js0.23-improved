@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url("../fonts/minecraftfont.eot");
+    src: url("../fonts/minecraftfont.woff") format("woff"), url("../fonts/minecraftfont.ttf") format("truetype"); }
+
+html, body {
+    overflow: hidden;
+    font-family: Minecraft, sans-serif;
+    height: 100%;
+    margin:0;
+    color: white;
+    position: relative;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("../textures/dirt.png");
+    filter: brightness(0.35);
+    background-size: 128px 128px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    z-index: -10;
+}
+
+main, .page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.btn {
+    position: relative;
+    text-align: center;
+    width: 700px;
+    height: 70px;
+    cursor: default !important;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn.disabled {
+    color: #E0E0E0;
+}
+
+.btn-bottom {
+    margin-top: 70px;
+}
+
+.btn-text:before {
+    position: absolute;
+    top: 25%; left: 0;
+    width: 100%; height: 100%;
+    z-index: 3;
+    font-size: 25px;
+}
+.btn-text {
+    position: absolute;
+    top: 25%; left: 0;
+    width: 100%; height: 100%;
+    z-index: 3;
+    font-size: 25px;
+}
+
+.btn img {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+p, h1, h2, span {
+    position: relative;
+}
+
+p:before, h1:before, h2:before, span:before {
+    content:attr(data-text);
+    position: absolute; 
+    top: 2px;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    z-index: -1 !important;
+}
+
+.logo {
+    width: 900px;
+    margin-bottom: 100px;
+}
+.logo img {
+    width: 100%;
+}
