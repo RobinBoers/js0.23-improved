@@ -17,7 +17,7 @@
 <body onload="menuScreen()">
 <div class="page-content menu">
     <main role="main" class="u-main">
-        <div class="logo"><img src="assets/textures/logo.png"></div>
+        <div class="logo"><img src="assets/textures/logo.png"><span class="pulse splash">OK BOOMER</span></div>
         <!-- <div><h1 data-text="Minecraft Classic">Minecraft Classic</h1></div> -->
         <a onclick="newGame()" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
         <a class="btn disabled" id="loadBtn"><div class="btn-text"><span data-text="Load level...">Load level...</span></div></a>
@@ -60,6 +60,7 @@
     var options = document.querySelector(".options");
     var newgame = document.querySelector(".newgame");
     var loadBtn = document.querySelector("#loadBtn");
+    var splashText = document.querySelector(".splash");
 
     // Functions to switch visible screen
 
@@ -92,6 +93,21 @@
         loadBtn.setAttribute("href", "game.html"); 
         loadBtn.setAttribute("class", "btn"); 
     }
+
+    // Random thing from array thingie from StackOverflow
+    Array.prototype.random = function () {
+        return this[Math.floor((Math.random()*this.length))];
+    }
+
+    var splashes = [
+        'Thank you Notch','10 years old', 'classic', 'Wine and Cookies', 'Rainbow', 'Tetris', 'Wohoo', 'Awesome', '1% sugar', '20 GOTO 10', '90% bug free', 'Ahhhhhh', 'All rumors are true', 'Aww man', 'Best in class', '(no) Buzzy Bees', 'Casual gaming', 'Check it out', 'Farlands', 'Child\'s play', 'Closed source', 'Colormatic', 'Create', 'Build', 'Sandbox', 'Déjà vu', 'doot doot', 'Fabulous graphics', 'Freaky', '/give @a hugs 64', 'Just like Linux', 'Got your nose', 'Degoogled', 'Haunted', 'Herobriners', 'HURNERJSGER?', 'I have a suggestion', 'Indev', 'Indie', 'It came from space', '100% dragon free', 'Mmmph, mmph', 'Now in 3D', 'Grass, stone', 'Now Javascript', '<3 Node.js', 'Poof', 'POG', 'Microsoft??', 'Oh man', 'Place ALL the blocks', 'Look out'
+    ];
+
+    // Get random splash
+    var randomSplash = splashes.random();
+
+    // Display it
+    splashText.innerText = randomSplash;
 </script>
 
 <noscript>
