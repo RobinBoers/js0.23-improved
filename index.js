@@ -14,12 +14,11 @@ function createWindow () {
   })
 
   // Remove UGLY menubar
-  w.setMenuBarVisibility(false);
-  w.setAutoHideMenuBar(true);
+  mainWindow.setMenuBarVisibility(false)
+  mainWindow.setAutoHideMenuBar(true);
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-  mainWindow.setMenuBarVisibility(false)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
