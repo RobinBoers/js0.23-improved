@@ -15,7 +15,7 @@ html, body {
     image-rendering: -moz-crisp-edges;
 }
 
-.newgame {
+.newgame, .options, .menu {
     display: none;
 }
 
