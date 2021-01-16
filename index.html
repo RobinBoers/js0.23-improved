@@ -20,7 +20,7 @@
         <div class="logo"><img src="assets/textures/logo.png"></div>
         <!-- <div><h1 data-text="Minecraft Classic">Minecraft Classic</h1></div> -->
         <a onclick="newGame()" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
-        <a href="game.html" class="btn"><div class="btn-text"><span data-text="Load level...">Load level...</span></div></a>
+        <a class="btn disabled" id="loadBtn"><div class="btn-text"><span data-text="Load level...">Load level...</span></div></a>
         <a class="btn disabled"><div class="btn-text"><span data-text="Play tutorial level">Play tutorial level</span></div></a>
 
         <a onclick="optionsScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
@@ -57,6 +57,7 @@
     var menu = document.querySelector(".menu");
     var options = document.querySelector(".options");
     var newgame = document.querySelector(".newgame");
+    var loadBtn = document.querySelector("#loadBtn");
 
     function newGame() {
         menu.style.display = "none";
@@ -74,6 +75,16 @@
         menu.style.display = "none";
         options.style.display = "block";
         newgame.style.display = "none";
+    }
+
+    localStorage = window.localStorage;
+
+    if (localStorage.getItem("savedGame") === null) {
+        loadBtn.setAttribute("href", "#"); 
+        loadBtn.setAttribute("class", "btn disabled"); 
+    } else {
+        loadBtn.setAttribute("href", "game.html"); 
+        loadBtn.setAttribute("class", "btn"); 
     }
 </script>
 
