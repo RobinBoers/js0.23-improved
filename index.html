@@ -15,18 +15,65 @@
     <link href="assets/css/menu198e.css?4e4e005077c1d4940468" rel="stylesheet">
 </head>
 <body>
-<div class="page-content">
+<div class="page-content menu">
     <main role="main" class="u-main">
         <div class="logo"><img src="assets/textures/logo.png"></div>
         <!-- <div><h1 data-text="Minecraft Classic">Minecraft Classic</h1></div> -->
-        <a href="newgame.html" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
+        <a onclick="newGame()" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
         <a href="game.html" class="btn"><div class="btn-text"><span data-text="Load level...">Load level...</span></div></a>
         <a class="btn disabled"><div class="btn-text"><span data-text="Play tutorial level">Play tutorial level</span></div></a>
 
-        <a href="options.html" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
+        <a onclick="optionsScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
     </main>
     <div class="version"><span data-text="Copyright Mojang Specifications. Do not distribute.">Copyright Mojang Specifications. Do not distribute.</span></div>
 </div>
+<div class="page-content newgame">
+    <main role="main" class="u-main">
+        <div><h1 data-text="Generate new level">Generate new level</h1></div>
+        <a href="game.html?size=small" class="btn"><div class="btn-text"><span data-text="Small">Small</span></div></a>
+        <a href="game.html?size=small" class="btn"><div class="btn-text"><span data-text="Normal">Normal</span></div></a>
+        <a href="game.html?size=small" class="btn"><div class="btn-text"><span data-text="Huge">Huge</span></div></a>
+
+        <a onclick="menuScreen()" class="btn"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
+    </main>
+</div>
+<div class="page-content options">
+    <main role="main" class="u-main">
+        <div><h1 data-text="Options">Options</h1></div>
+        
+        <a class="btn"><div class="btn-text"><span data-text="Music: OFF">Music: OFF</span></div></a>
+        <a href="game.html?size=small" class="btn"><div class="btn-text"><span data-text="Sound: OFF">Sound: OFF</span></div></a>
+        <a class="btn"><div class="btn-text"><span data-text="Invert mouse: OFF">Invert mouse: OFF</span></div></a>
+        <a class="btn"><div class="btn-text"><span data-text="Show FPS: ON">Show FPS: ON</span></div></a>
+        <a class="btn"><div class="btn-text"><span data-text="Render distance: NORMAL">Render distance: NORMAL</span></div></a>
+
+        <a onclick="menuScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
+    </main>
+</div>
+
+<script>
+    var menu = document.querySelector(".menu");
+    var options = document.querySelector(".options");
+    var newgame = document.querySelector(".newgame");
+
+    function newGame() {
+        menu.style.display = "none";
+        options.style.display = "none";
+        newgame.style.display = "block";
+    }
+
+    function menuScreen() {
+        menu.style.display = "block";
+        options.style.display = "none";
+        newgame.style.display = "none";
+    }
+
+    function optionsScreen() {
+        menu.style.display = "none";
+        options.style.display = "block";
+        newgame.style.display = "none";
+    }
+</script>
 
 <noscript>
     This game requiers Javascript to run. Please turn on Javascript in your browser settings

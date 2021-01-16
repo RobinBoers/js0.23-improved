@@ -15,6 +15,10 @@ html, body {
     image-rendering: -moz-crisp-edges;
 }
 
+.newgame {
+    display: none;
+}
+
 body:before {
     content: "";
     position: absolute;
