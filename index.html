@@ -54,10 +54,14 @@
 </div>
 
 <script>
+
+    // Get elements from html
     var menu = document.querySelector(".menu");
     var options = document.querySelector(".options");
     var newgame = document.querySelector(".newgame");
     var loadBtn = document.querySelector("#loadBtn");
+
+    // Functions to switch visible screen
 
     function newGame() {
         menu.style.display = "none";
@@ -79,6 +83,8 @@
 
     localStorage = window.localStorage;
 
+    // Disable the "Load level.." button
+    // when there is no saved level to load.
     if (localStorage.getItem("savedGame") === null) {
         loadBtn.setAttribute("href", "#"); 
         loadBtn.setAttribute("class", "btn disabled"); 
@@ -91,7 +97,7 @@
 <noscript>
     <div class="page-content">
         <main role="main">
-            This game requiers Javascript to run. Please turn on Javascript in your browser settings
+            This game requiers Javascript to run. Please turn on Javascript in your browser settings.
         </main>
     </div>
 </noscript>
