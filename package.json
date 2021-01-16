@@ -1,0 +1,33 @@
+{
+  "name": "mclassic.js",
+  "version": "0.0.23",
+  "description": "Improved version of the webversion of Minecraft Classic",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinBoers/mc-classic-improved.git"
+  },
+  "keywords": [
+    "mc",
+    "mcclassic",
+    "minecraft",
+    "classic",
+    "improved",
+    "mod",
+    "modding",
+    "modded"
+  ],
+  "author": "Robijntje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinBoers/mc-classic-improved/issues"
+  },
+  "homepage": "https://github.com/RobinBoers/mc-classic-improved#readme",
+  "devDependencies": {
+    "electron": "^11.1.1"
+  }
+}

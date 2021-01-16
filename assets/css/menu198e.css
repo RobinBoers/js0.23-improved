@@ -131,7 +131,85 @@ p:before, h1:before, h2:before, span:before {
 .logo {
     width: 900px;
     margin-bottom: 100px;
+    height: 147px;
+    position: relative;
 }
 .logo img {
     width: 100%;
+    height: 100%;
+}
+
+.pulse {
+    -webkit-animation: puls 1s cubic-bezier(.46,.03,.52,.96);
+    -webkit-animation-iteration-count: infinite;
+    animation: pulse 1s cubic-bezier(.46,.03,.52,.96);
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-25deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-25deg);
+    }
+    100% {
+        transform: scale(1) rotate(-25deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-25deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-25deg);
+    }
+    100% {
+        transform: scale(1) rotate(-25deg);
+    }
+}
+
+.splash {
+    position: absolute;
+    color: yellow;
+    right: 10px;
+    bottom: 20px;
+    font-size: 33px;
+}
+
+.splash::after {
+    content: "!";
+}
+
+.bold {
+    font-weight: bolder !important;
+}
+
+.credits main {
+    display: block;
+    overflow-y: auto;
+    margin:50px;
+    max-width: 95%;
+    max-height: 80%;
+    overflow-wrap: break-word;
+    padding-bottom: 300px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.credits main::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .credits main {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .credits main {
+        max-width: 95%;
+    }
 }
