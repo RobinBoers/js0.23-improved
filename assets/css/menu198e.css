@@ -189,7 +189,27 @@ p:before, h1:before, h2:before, span:before {
 .credits main {
     display: block;
     overflow-y: auto;
-    overflow-x:hidden;
-    margin:auto;
-    width: 40%
+    margin:50px;
+    max-width: 95%;
+    max-height: 80%;
+    overflow-wrap: break-word;
+    padding-bottom: 300px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.credits main::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .credits main {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .credits main {
+        max-width: 95%;
+    }
 }
