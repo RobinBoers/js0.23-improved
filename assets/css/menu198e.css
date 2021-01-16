@@ -181,3 +181,15 @@ p:before, h1:before, h2:before, span:before {
 .splash::after {
     content: "!";
 }
+
+.bold {
+    font-weight: bolder !important;
+}
+
+.credits main {
+    display: block;
+    overflow-y: auto;
+    overflow-x:hidden;
+    margin:auto;
+    width: 40%
+}

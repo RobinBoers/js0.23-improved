@@ -25,7 +25,7 @@
 
         <a onclick="optionsScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
     </main>
-    <div class="version"><span data-text="Copyright Mojang Specifications. Do not distribute.">Copyright Mojang Specifications. Do not distribute.</span></div>
+    <div class="version"><span onclick="showCredits()" data-text="Copyright Mojang Specifications. Do not distribute.">Copyright Mojang Specifications. Do not distribute.</span></div>
 </div>
 <div class="page-content newgame">
     <main role="main" class="u-main">
@@ -52,6 +52,20 @@
         <a onclick="menuScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
     </main>
 </div>
+<div class="page-content credits">
+    <main role="main" class="u-main" onclick="menuScreen()">
+        <div class="logo-credits"><img src="assets/textures/logo.png"></div>
+        <p class="bold" data-text="Original Creator">Original Creator:</p>
+        <p data-text="Notch">Notch</p>
+        <p data-text="---------------">---------------</p>
+        <p data-text="This is a online recreation of the Classic creative version 0.0.23a_01 which is written in Javascript. This port was made for the 10 year anniversary of the game.">This is a online recreation of the Classic creative version 0.0.23a_01 which is written in Javascript. This port was made for the 10 year anniversary of the game.</p>
+        <p data-text="Copyright Mojang Studios">Copyright Mojang Studios</p>
+        <p data-text="---------------">---------------</p>
+        <p data-text="Modded by Robijntje">Modded by Robijntje</p>
+        <p data-text="---------------">---------------</p>
+        <p data-text="Twenty years from now you will be more disappointed by thethings you didn’t do than by the ones you did do. So throw offthe bowlines. Sail away from the safe harbor. Catch the tradewinds in your sails.Explore. Dream. Discover.">Twenty years from now you will be more disappointed by thethings you didn’t do than by the ones you did do. So throw offthe bowlines. Sail away from the safe harbor. Catch the tradewinds in your sails.Explore. Dream. Discover. <span style="color:grey">-Unknown</span></p>
+    </main>
+</div>
 
 <script>
 
@@ -59,6 +73,7 @@
     var menu = document.querySelector(".menu");
     var options = document.querySelector(".options");
     var newgame = document.querySelector(".newgame");
+    var credits = document.querySelector(".credits");
     var loadBtn = document.querySelector("#loadBtn");
     var splashText = document.querySelector(".splash");
 
@@ -68,18 +83,28 @@
         menu.style.display = "none";
         options.style.display = "none";
         newgame.style.display = "block";
+        credits.style.display = "none";
     }
 
     function menuScreen() {
         menu.style.display = "block";
         options.style.display = "none";
         newgame.style.display = "none";
+        credits.style.display = "none";
     }
 
     function optionsScreen() {
         menu.style.display = "none";
         options.style.display = "block";
         newgame.style.display = "none";
+        credits.style.display = "none";
+    }
+
+    function showCredits() {
+        menu.style.display = "none";
+        options.style.display = "none";
+        newgame.style.display = "none";
+        credits.style.display = "block";
     }
 
     localStorage = window.localStorage;
