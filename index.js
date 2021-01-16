@@ -7,13 +7,19 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    toolbar: false, 
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
+  // Remove UGLY menubar
+  w.setMenuBarVisibility(false);
+  w.setAutoHideMenuBar(true);
+
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  mainWindow.setMenuBarVisibility(false)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
