@@ -735,7 +735,7 @@ function startGeneration (obj) { //{worldSize: worldSize, seed: props.seed, seed
 	var width = obj.worldSize;
 	var depth = obj.worldSize;
 	var height = 64;
-	level.createLevel(71416045835628, width, depth, height); //obj.seed, 71876045834828 for testing
+	level.createLevel(obj.seed, width, depth, height); //obj.seed, 71876045834828 for testing, 71416045835628 used later
 }
 
 self.addEventListener('message', function(e) {
