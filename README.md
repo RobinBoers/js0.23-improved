@@ -10,6 +10,8 @@ A fork of the classic.minecraft.net game. I changed the following things:
 - Credits screen
 - Custom world-gen
 
+I used some code from [RealTheSunCat](https://github.com/RealTheSunCat/Minecraft-Classic-Reversed), who documented large parts of the code.
+
 ### Takedown
 
 This project is just meant as a fun thing to make. If it needs to be taken down  
