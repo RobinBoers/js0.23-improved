@@ -9,3 +9,8 @@ A fork of the classic.minecraft.net game. I changed the following things:
 - Fixed sounds not playing when placing blocks
 - Credits screen
 - Custom world-gen
+
+### Takedown
+
+This project is just meant as a fun thing to make. If it needs to be taken down  
+for legal reasons, please create a new issue at the issues tab.
