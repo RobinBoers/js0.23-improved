@@ -15,6 +15,12 @@ html, body {
     image-rendering: -moz-crisp-edges;
 }
 
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
 .newgame, .options, .menu {
     display: none;
 }
