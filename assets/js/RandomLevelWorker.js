@@ -151,7 +151,7 @@ var RandomLevel = function () {
         this.tiles = [];//new Array(xSize*zSize*ySize);//[];
         this.fillQueue = [];
 
-        console.log(this.random);
+        // console.log(this.random);
 
         // grow
         this.grow = function(aint) {
@@ -221,7 +221,7 @@ var RandomLevel = function () {
 
             //this.progress(100);
             //System.out.println("LavaCount: " + i);
-            console.log("LavaCount: " + i);
+            // console.log("LavaCount: " + i);
         }
 
         // plant
@@ -420,7 +420,7 @@ var RandomLevel = function () {
 
                 if (k3 != z || l3 != l2) {
                     //System.out.println("hoooly fuck");
-                    console.log("hoooly fuck")
+                    // console.log("hoooly fuck")
                 }
 
                 var flag = false;
@@ -731,7 +731,6 @@ var RandomLevel = function () {
 
 function startGeneration (obj) { //{worldSize: worldSize, seed: props.seed, seedrandom: seedrandom}
 	var level = new RandomLevel();
-	console.log(level)
 	var width = obj.worldSize;
 	var depth = obj.worldSize;
 	var height = 64;
@@ -739,6 +738,5 @@ function startGeneration (obj) { //{worldSize: worldSize, seed: props.seed, seed
 }
 
 self.addEventListener('message', function(e) {
-  console.log(e.data);
   startGeneration(e.data)
 }, false);
