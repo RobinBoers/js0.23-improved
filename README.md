@@ -1,7 +1,7 @@
 # mc-classic-improved
 A fork of the classic.minecraft.net game. I changed the following things:
 
-- Made a electron application
+- Electron application
 - Tweaked menus
 - Good mouse controls
 - Custom main menu
@@ -13,9 +13,14 @@ A fork of the classic.minecraft.net game. I changed the following things:
 - No grass spread on player placed blocks
 - Correctly pitched bush sounds
 - All items are obtainable
+- Inproved movement
+- Simple fying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
 
-I used some code from [RealTheSunCat](https://github.com/RealTheSunCat/Minecraft-Classic-Reversed), who documented large parts of the code.  
-I also used some code from Alawnely, who has [this great video](https://www.youtube.com/watch?v=SFom-RNcLps&t=586s) about modding js0.23.
+### Thanks to
+
+- [RealTheSunCat](https://github.com/RealTheSunCat/Minecraft-Classic-Reversed), who documented large parts of the code.  
+- Alawnely, who has [this great video](https://www.youtube.com/watch?v=SFom-RNcLps&t=586s) about modding js0.23
+- The js0.23 modding community
 
 ### Takedown
 
