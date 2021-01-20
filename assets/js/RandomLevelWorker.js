@@ -504,7 +504,7 @@ var RandomLevel = function () {
         var distort1 = new Distort(new PerlinNoise(this.random, 8), new PerlinNoise(this.random, 8));
         var perlinnoise = new PerlinNoise(this.random, 8);
         var aint = [];
-        var f = 1; //1.3
+        var f = 1.3; //1.3
 
         var l;
         var i1;
