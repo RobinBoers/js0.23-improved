@@ -201,8 +201,10 @@ p:before, h1:before, h2:before, span:before {
 
 .credits main {
     display: block;
+    text-align: center;
     overflow-y: auto;
-    margin:50px;
+    margin:auto;
+    margin-top: 50px;
     max-width: 95%;
     max-height: 80%;
     overflow-wrap: break-word;
