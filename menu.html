@@ -124,6 +124,7 @@
 
     function restoreDefaults() {
         localStorage.removeItem("settings");
+        localStorage.removeItem("fullscreen");
         reload();
     }
 
@@ -159,7 +160,7 @@
             delBtn.setAttribute("class", "btn"); 
         }
 
-        if(localStorage.getItem("settings") === null) {
+        if(localStorage.getItem("settings") === null && (localStorage.getItem("fullscreen") === null || localStorage.getItem("fullscreen") === "false")) {
             restBtn.setAttribute("onclick", ""); 
             restBtn.setAttribute("class", "btn disabled"); 
         } else {
@@ -167,22 +168,12 @@
             restBtn.setAttribute("class", "btn"); 
         }
 
-        var str = "Fullscreen: OOPS!";
-
         if(localStorage.getItem("fullscreen") === null) {
             localStorage.setItem("fullscreen", "false");
         } 
 
-        if(localStorage.getItem("fullscreen") === "false") {
-            str = "Fullscreen: OFF";
-            closeFullscreen();
-        } else if(localStorage.getItem("fullscreen") === "true") {
-            str = "Fullscreen: ON";
-            openFullscreen();
-        }
+        checkForFullscreen();
 
-        fullBtn.innerText = str;
-        fullBtn.setAttribute("data-text", str); 
     }
 
     reload();
@@ -209,6 +200,19 @@
         } else if (document.msExitFullscreen) { /* IE11 */
             document.msExitFullscreen();
         }
+    }
+
+    function checkForFullscreen() {
+        var str = "Fullscreen: OOPS!";
+        if(localStorage.getItem("fullscreen") === "false") {
+            str = "Fullscreen: OFF";
+            try {closeFullscreen()} catch{console.log("Failed to close fullscreen. Maybe already closed?")}
+        } else if(localStorage.getItem("fullscreen") === "true") {
+            str = "Fullscreen: ON";
+            try {openFullscreen()} catch{console.log("Failed to open fullscreen. Maybe already opend?")}
+        }
+        fullBtn.innerText = str;
+        fullBtn.setAttribute("data-text", str); 
     }
 
     // Splashes
