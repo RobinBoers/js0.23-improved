@@ -26,6 +26,7 @@ iframe {
     height: 100%;
     width: 100%;
     border: none;
+    background-color:#ffffff00;
 }
 
 .newgame, .options, .menu, .credits {
