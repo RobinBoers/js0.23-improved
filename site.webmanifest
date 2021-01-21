@@ -1,0 +1,14 @@
+{
+    "name": "Classic",
+    "short_name": "Classic",
+    "icons": [
+        {
+            "src": "/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2b2b2b",
+    "background_color": "#2b2b2b",
+    "display": "standalone"
+}
