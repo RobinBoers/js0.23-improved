@@ -28,7 +28,7 @@ iframe {
     border: none;
 }
 
-.newgame, .options, .menu {
+.newgame, .options, .menu, .credits {
     display: none;
 }
 

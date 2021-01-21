@@ -76,6 +76,21 @@
     </main>
 </div>
 
+<noscript>
+    <div class="page-content">
+        <main role="main">
+            This game requiers Javascript to run. Please turn on Javascript in your browser settings.
+        </main>
+    </div>
+</noscript>
+
+<div class="page-content oops">
+    <main role="main" class="u-main">
+        <div class="logo-credits"><img src="assets/textures/logo.png"></div>
+        <p data-text="Oops! Something went wrong!">Oops! Something went wrong!</p>
+    </main>
+</div>
+
 <script>
 
     // Get elements from html
@@ -83,6 +98,7 @@
     var options = document.querySelector(".options");
     var newgame = document.querySelector(".newgame");
     var credits = document.querySelector(".credits");
+    var oops = document.querySelector(".oops");
     var loadBtn = document.querySelector("#loadBtn");
     var delBtn = document.querySelector("#delBtn");
     var restBtn = document.querySelector("#restBtn");
@@ -104,6 +120,7 @@
         options.style.display = "none";
         newgame.style.display = "none";
         credits.style.display = "none";
+        oops.style.display = "none";
     }
 
     function optionsScreen() {
@@ -232,13 +249,5 @@
     // Display it
     splashText.innerText = randomSplash;
 </script>
-
-<noscript>
-    <div class="page-content">
-        <main role="main">
-            This game requiers Javascript to run. Please turn on Javascript in your browser settings.
-        </main>
-    </div>
-</noscript>
 
 </html>
