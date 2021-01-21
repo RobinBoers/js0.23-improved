@@ -1,19 +1,23 @@
 # mc-classic-improved
-A fork of the classic.minecraft.net game. I changed the following things:
+
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/RobinBoers/mc-classic-improved.svg?style=flat)](https://github.com/RobinBoers/mc-classic-improved/pulls)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  
+[![GitHub last commit](https://img.shields.io/github/last-commit/RobinBoers/mc-classic-improved.svg?style=flat)](https://github.com/RobinBoers/mc-classic-improved/commit/master)
+
+This project aims to improve upon js0.23 ([classic.minecraft.net](https://classic.minecraft.net)) by adding features to make it closer to the original, or just stuff I like myself.
 
 - Electron application
 - Tweaked menus
 - Good mouse controls
 - Custom main menu
-- Remapped default settings
-- Fixed sounds not playing when placing blocks
-- Credits screen
-- Custom world-gen
+- Custom default settings
+- Fixed sounds not playing when placing blocks (this wasn't in the original, but I also don't like it in the original)
+- Hidden credits screen
 - Custom commands (/say, /tele, /seed)
 - No grass spread on player placed blocks
-- Correctly pitched bush sounds
+- Better pitched bush sounds (but I also like the low sound, so it's a bit lower then the original)
 - All items are obtainable
-- Inproved movement
+- Somewhat improved movement
 - Simple fying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
 
 ### Thanks to
