@@ -145,9 +145,17 @@
         reload();
     }
 
+    function loadLevel() {
+        setTimeout(() => { 
+            window.location = "game.html";
+        }, 150);
+    }
+
     function generateNewGame(size) {
-        deleteSavedLevel();
-        window.location = "game.html?size="+size;
+        setTimeout(() => { 
+            deleteSavedLevel();
+            window.location = "game.html?size="+size;
+        }, 150);
     }
 
     function deleteSavedLevel() {
@@ -171,12 +179,12 @@
         // Disable the "Load level.." button
         // when there is no saved level to load.
         if (localStorage.getItem("savedGame") === null) {
-            loadBtn.setAttribute("href", "#"); 
+            loadBtn.setAttribute("onclick", ""); 
             loadBtn.setAttribute("class", "btn disabled"); 
             delBtn.setAttribute("onclick", ""); 
             delBtn.setAttribute("class", "btn disabled"); 
         } else {
-            loadBtn.setAttribute("href", "game.html"); 
+            loadBtn.setAttribute("onclick", "bntClick();loadLevel()"); 
             loadBtn.setAttribute("class", "btn"); 
             delBtn.setAttribute("onclick", "bntClick();deleteSavedLevel()"); 
             delBtn.setAttribute("class", "btn"); 
