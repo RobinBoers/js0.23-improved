@@ -19,22 +19,22 @@
     <main role="main" class="u-main">
         <div class="logo"><img src="assets/textures/logo.png"><span class="pulse splash">OK BOOMER</span></div>
         <!-- <div><h1 data-text="Minecraft Classic">Minecraft Classic</h1></div> -->
-        <a onclick="newGame()" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
+        <a onclick="bntClick();newGame()" class="btn"><div class="btn-text"><span data-text="Generate new level...">Generate new level...</span></div></a>
         <a class="btn disabled" id="loadBtn"><div class="btn-text"><span data-text="Load level...">Load level...</span></div></a>
         <a class="btn disabled"><div class="btn-text"><span data-text="Play tutorial level">Play tutorial level</span></div></a>
 
-        <a onclick="optionsScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
+        <a onclick="bntClick();optionsScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Options">Options</span></div></a>
     </main>
     <div class="version"><span onclick="showCredits()" data-text="Copyright Mojang Specifications. Do not distribute.">Copyright Mojang Specifications. Do not distribute.</span></div>
 </div>
 <div class="page-content newgame">
     <main role="main" class="u-main">
         <div><h1 data-text="Generate new level">Generate new level</h1></div>
-        <a onclick="generateNewGame('small')" class="btn"><div class="btn-text"><span data-text="Small">Small</span></div></a>
-        <a onclick="generateNewGame('normal')" class="btn"><div class="btn-text"><span data-text="Normal">Normal</span></div></a>
-        <a onclick="generateNewGame('huge')" class="btn"><div class="btn-text"><span data-text="Huge">Huge</span></div></a>
+        <a onclick="bntClick();generateNewGame('small')" class="btn"><div class="btn-text"><span data-text="Small">Small</span></div></a>
+        <a onclick="bntClick();generateNewGame('normal')" class="btn"><div class="btn-text"><span data-text="Normal">Normal</span></div></a>
+        <a onclick="bntClick();generateNewGame('huge')" class="btn"><div class="btn-text"><span data-text="Huge">Huge</span></div></a>
 
-        <a onclick="menuScreen()" class="btn"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
+        <a onclick="bntClick();menuScreen()" class="btn"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
     </main>
 </div>
 <div class="page-content options">
@@ -42,13 +42,13 @@
         <div><h1 data-text="Options">Options</h1></div>
         
         <a class="btn" id="delBtn"><div class="btn-text"><span data-text="Delete saved level">Delete saved level</span></div></a>
-        <a onclick="toggleFullscreen()" class="btn"><div class="btn-text"><span data-text="Fullscreen: OFF" id="fullBtn">Fullscreen: OFF</span></div></a>
+        <a onclick="bntClick();toggleFullscreen()" class="btn"><div class="btn-text"><span data-text="Fullscreen: OFF" id="fullBtn">Fullscreen: OFF</span></div></a>
         <a class="btn disabled"><div class="btn-text"><span data-text="Use modded client: ON">Use modded client: ON</span></div></a>
         <a class="btn" id="restBtn"><div class="btn-text"><span data-text="Restore defaults">Restore defaults</span></div></a>
 
         <div><p data-text="Gameplay options only available in-game.">Gameplay options only available in-game.</p></div>
 
-        <a onclick="menuScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Back">Back</span></div></a>
+        <a onclick="bntClick();menuScreen()" class="btn btn-bottom"><div class="btn-text"><span data-text="Back">Back</span></div></a>
     </main>
 </div>
 <div class="page-content credits">
@@ -155,6 +155,11 @@
         reload();
     }
 
+    function bntClick() {
+        var audio = new Audio('assets/sounds/click.mp3');
+        audio.play();
+    }
+
     function toggleFullscreen() {
         if(localStorage.getItem("fullscreen") === "false") {
             localStorage.setItem("fullscreen", "true");
@@ -173,7 +178,7 @@
         } else {
             loadBtn.setAttribute("href", "game.html"); 
             loadBtn.setAttribute("class", "btn"); 
-            delBtn.setAttribute("onclick", "deleteSavedLevel()"); 
+            delBtn.setAttribute("onclick", "bntClick();deleteSavedLevel()"); 
             delBtn.setAttribute("class", "btn"); 
         }
 
@@ -181,7 +186,7 @@
             restBtn.setAttribute("onclick", ""); 
             restBtn.setAttribute("class", "btn disabled"); 
         } else {
-            restBtn.setAttribute("onclick", "restoreDefaults()"); 
+            restBtn.setAttribute("onclick", "bntClick();restoreDefaults()"); 
             restBtn.setAttribute("class", "btn"); 
         }
 
