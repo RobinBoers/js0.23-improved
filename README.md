@@ -20,6 +20,12 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - Somewhat improved movement
 - Simple fying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
 
+### Contributing
+
+If you have cool ideas, bugfixes, suggestions or anything else,
+feel free to contribute to the project by making a pull request!  
+[Read more about contributing to this project](CONTRIBUTING.md)
+
 ### Thanks to
 
 - [RealTheSunCat](https://github.com/RealTheSunCat/Minecraft-Classic-Reversed), who documented large parts of the code.  
