@@ -213,7 +213,7 @@
             delBtn.setAttribute("class", "btn"); 
         }
 
-        if(localStorage.getItem("settings") === null && (localStorage.getItem("fullscreen") === null || localStorage.getItem("fullscreen") === "false")) {
+        if(localStorage.getItem("settings") === null && (localStorage.getItem("fullscreen") === null || localStorage.getItem("fullscreen") === "false") && (localStorage.getItem("modded") === null || localStorage.getItem("modded") === "false")) {
             restBtn.setAttribute("onclick", ""); 
             restBtn.setAttribute("class", "btn disabled"); 
         } else {
