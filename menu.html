@@ -53,7 +53,7 @@
         
         <a class="btn" id="delBtn"><div class="btn-text"><span data-text="Delete saved level">Delete saved level</span></div></a>
         <a onclick="bntClick();toggleFullscreen()" class="btn"><div class="btn-text"><span data-text="Fullscreen: OFF" id="fullBtn">Fullscreen: OFF</span></div></a>
-        <a class="btn disabled"><div class="btn-text"><span data-text="Use modded client: ON">Use modded client: ON</span></div></a>
+        <a onclick="bntClick();toggleModded()" class="btn"><div class="btn-text"><span data-text="Use modded client: OFF" id="modBtn">Use modded client: OFF</span></div></a>
         <a class="btn" id="restBtn"><div class="btn-text"><span data-text="Restore defaults">Restore defaults</span></div></a>
 
         <div><p data-text="Gameplay options only available in-game.">Gameplay options only available in-game.</p></div>
@@ -113,6 +113,7 @@
     var delBtn = document.querySelector("#delBtn");
     var restBtn = document.querySelector("#restBtn");
     var fullBtn = document.querySelector("#fullBtn");
+    var modBtn = document.querySelector("#modBtn");
     var splashText = document.querySelector(".splash");
     localStorage = window.localStorage;
 
@@ -181,7 +182,18 @@
     function toggleFullscreen() {
         if(localStorage.getItem("fullscreen") === "false") {
             localStorage.setItem("fullscreen", "true");
-        } else localStorage.setItem("fullscreen", "false");
+            try {openFullscreen()} catch{console.log("Failed to close fullscreen. Maybe already closed?")}
+        } else {
+            localStorage.setItem("fullscreen", "false");
+            try {closeFullscreen()} catch{console.log("Failed to close fullscreen. Maybe already closed?")}
+        }
+        reload();
+    }
+
+    function toggleModded() {
+        if(localStorage.getItem("modded") === "false") {
+            localStorage.setItem("modded", "true");
+        } else localStorage.setItem("modded", "false");
         reload();
     }
 
@@ -212,7 +224,20 @@
             localStorage.setItem("fullscreen", "false");
         } 
 
+        if(localStorage.getItem("modded") === null) {
+            localStorage.setItem("modded", "false");
+        } 
+
         checkForFullscreen();
+
+        var str = "Use modded client: OOPS!";
+        if(localStorage.getItem("modded") === "false") {
+            str = "Use modded client: OFF";
+        } else if(localStorage.getItem("modded") === "true") {
+            str = "Use modded client: ON";
+        }
+        modBtn.innerText = str;
+        modBtn.setAttribute("data-text", str); 
 
     }
 
@@ -246,10 +271,8 @@
         var str = "Fullscreen: OOPS!";
         if(localStorage.getItem("fullscreen") === "false") {
             str = "Fullscreen: OFF";
-            try {closeFullscreen()} catch{console.log("Failed to close fullscreen. Maybe already closed?")}
         } else if(localStorage.getItem("fullscreen") === "true") {
             str = "Fullscreen: ON";
-            try {openFullscreen()} catch{console.log("Failed to open fullscreen. Maybe already opend?")}
         }
         fullBtn.innerText = str;
         fullBtn.setAttribute("data-text", str); 
