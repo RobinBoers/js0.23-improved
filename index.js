@@ -21,7 +21,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Window icon
-  mainWindow.setIcon('assets/textures/icon.png');
+  mainWindow.setIcon('assets/textures/modded/icon.png');
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()

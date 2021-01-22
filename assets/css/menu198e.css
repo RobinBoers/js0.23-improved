@@ -38,7 +38,7 @@ body:before {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-image: url("../textures/dirt.png");
+    background-image: url("../textures/modded/dirt.png");
     filter: brightness(0.35);
     background-size: 128px 128px;
     image-rendering: pixelated;
@@ -76,7 +76,7 @@ main {
     cursor: default !important;
     color: white;
     margin-bottom: 15px;
-    background-image: url("../textures/button.png");
+    background-image: url("../textures/modded/button.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -87,12 +87,12 @@ main {
 
 .btn:hover {
     color: #FFFFA0;
-    background-image: url("../textures/button_over.png");
+    background-image: url("../textures/modded/button_over.png");
 }
 
 .btn.disabled {
     color: #E0E0E0;
-    background-image: url("../textures/button_disabled.png");
+    background-image: url("../textures/modded/button_disabled.png");
 }
 
 .btn-bottom {
