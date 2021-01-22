@@ -1,4 +1,4 @@
-# mc-classic-improved
+# js0.23-improved
 
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/RobinBoers/js0.23-improved.svg?style=flat)](https://github.com/RobinBoers/js0.23-improved/pulls)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
@@ -10,6 +10,7 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - Tweaked menus
 - Good mouse controls
 - Custom main menu
+- Seeds
 - Custom default settings
 - Fixed sounds not playing when placing blocks (this wasn't in the original, but I also don't like it in the original)
 - Hidden credits screen
