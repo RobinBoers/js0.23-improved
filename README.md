@@ -1,8 +1,8 @@
 # mc-classic-improved
 
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/RobinBoers/mc-classic-improved.svg?style=flat)](https://github.com/RobinBoers/mc-classic-improved/pulls)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/RobinBoers/js0.23-improved.svg?style=flat)](https://github.com/RobinBoers/js0.23-improved/pulls)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![GitHub last commit](https://img.shields.io/github/last-commit/RobinBoers/mc-classic-improved.svg?style=flat)](https://github.com/RobinBoers/mc-classic-improved/commit/master)
+[![GitHub last commit](https://img.shields.io/github/last-commit/RobinBoers/js0.23-improved.svg?style=flat)](https://github.com/RobinBoers/js0.23-improved/commit/master)
 
 This project aims to improve upon js0.23 ([classic.minecraft.net](https://classic.minecraft.net)) by adding features to make it closer to the original, or just stuff I like myself.
 
