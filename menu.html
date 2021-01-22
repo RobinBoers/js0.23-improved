@@ -40,6 +40,17 @@
 <div class="page-content newgame">
     <main role="main" class="u-main">
         <div><h1 data-text="Generate new level">Generate new level</h1></div>
+        <a onclick="bntClick();chooseSize()" class="btn"><div class="btn-text"><span id="sizeBtn" data-text="Size: Normal">Size: Normal</span></div></a>
+        <a onclick="bntClick();" class="btn"><input class="btn-input" id="seedInput" type="text" placeholder="Seed..."></a>
+
+        <a onclick="bntClick();generateNewGame()" class="btn btn-bottom"><div class="btn-text"><span data-text="Create">Create</span></div></a>
+        <a onclick="bntClick();menuScreen()" class="btn"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
+    </main>
+</div>
+
+<div class="page-content newgame-old">
+    <main role="main" class="u-main">
+        <div><h1 data-text="Generate new level">Generate new level</h1></div>
         <a onclick="bntClick();generateNewGame('small')" class="btn"><div class="btn-text"><span data-text="Small">Small</span></div></a>
         <a onclick="bntClick();generateNewGame('normal')" class="btn"><div class="btn-text"><span data-text="Normal">Normal</span></div></a>
         <a onclick="bntClick();generateNewGame('huge')" class="btn"><div class="btn-text"><span data-text="Huge">Huge</span></div></a>
@@ -47,6 +58,7 @@
         <a onclick="bntClick();menuScreen()" class="btn"><div class="btn-text"><span data-text="Cancel">Cancel</span></div></a>
     </main>
 </div>
+
 <div class="page-content options">
     <main role="main" class="u-main">
         <div><h1 data-text="Options">Options</h1></div>
@@ -114,6 +126,7 @@
     var restBtn = document.querySelector("#restBtn");
     var fullBtn = document.querySelector("#fullBtn");
     var modBtn = document.querySelector("#modBtn");
+    var sizeBtn = document.querySelector("#sizeBtn");
     var splashText = document.querySelector(".splash");
     localStorage = window.localStorage;
 
@@ -148,6 +161,20 @@
         credits.style.display = "block";
     }
 
+    var size = 1;
+
+    function chooseSize() {
+        if(size == 1) {
+            size = 2
+        } else if(size == 2) {
+            size = 0
+        } else {
+            size = 1
+        }
+
+        reload();
+    }
+
     // Functions for buttons
 
     function restoreDefaults() {
@@ -163,11 +190,35 @@
         }, 150);
     }
 
-    function generateNewGame(size) {
-        setTimeout(() => { 
-            deleteSavedLevel();
-            window.location = "game.html?size="+size;
-        }, 150);
+    function generateNewGame() {
+
+        var sizeStr = 256;
+
+        if(size == 0) sizeStr = "small";
+        else if(size == 2) sizeStr = "huge";
+        else sizeStr = "normal";
+
+        if(size == 0) size = 128;
+        else if(size == 2) size = 512;
+        else size = 256;
+
+        var seed = document.getElementById('seedInput').value;
+
+        var saveGame = {"worldSeed":seed,"changedBlocks":{},"worldSize":size,"version":1};
+        saveGame = JSON.stringify(saveGame);
+
+        if(seed == null || seed == "") {
+            setTimeout(() => { 
+                deleteSavedLevel();
+                window.location = "game.html?size="+sizeStr;
+            }, 150);
+        } else {
+            localStorage.setItem('savedGame', saveGame);
+            setTimeout(() => { 
+                window.location = "game.html";
+            }, 150);
+        }
+
     }
 
     function deleteSavedLevel() {
@@ -239,6 +290,18 @@
         }
         modBtn.innerText = str;
         modBtn.setAttribute("data-text", str); 
+
+        var str = "Size: OOPS!";
+        if(size == 1) {
+            str = "Size: Normal";
+        } else if(size == 2) {
+            str = "Size: Huge";
+        } else {
+            str = "Size: Small";
+        }
+
+        sizeBtn.innerText = str;
+        sizeBtn.setAttribute("data-text", str); 
 
     }
 
