@@ -19,7 +19,7 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - Better pitched bush sounds (but I also like the low sound, so it's a bit lower then the original)
 - All items are obtainable
 - Somewhat improved movement
-- Simple fying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
+- Simple flying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
 
 ### Contributing
 
