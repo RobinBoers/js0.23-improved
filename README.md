@@ -37,3 +37,5 @@ feel free to contribute to the project by making a pull request!
 
 This project is just meant as a fun thing to make. If it needs to be taken down  
 for legal reasons, please create a new issue at the issues tab.
+
+![Screenshot](screenshot.png)
