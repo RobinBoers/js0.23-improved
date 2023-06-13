@@ -9,7 +9,7 @@ function createWindow () {
     height: 800,
     toolbar: false, 
     webPreferences: {
-      preload: path.join(__dirname, 'assets/js/preload.js')
+      preload: path.join(__dirname, 'src/assets/js/preload.js')
     }
   })
 
@@ -18,10 +18,10 @@ function createWindow () {
   mainWindow.setAutoHideMenuBar(true);
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/index.html')
 
   // Window icon
-  mainWindow.setIcon('assets/textures/modded/icon.png');
+  mainWindow.setIcon('src/assets/textures/modded/icon.png');
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
