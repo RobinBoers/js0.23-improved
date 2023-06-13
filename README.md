@@ -21,19 +21,19 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - Somewhat improved movement
 - Simple flying mode (made by a mod developer at <http://mod.heathmitchell1.repl.co/>)
 
-### Contributing
+## Contributing
 
 If you have cool ideas, bugfixes, suggestions or anything else,
 feel free to contribute to the project by making a pull request!  
 [Read more about contributing to this project](CONTRIBUTING.md)
 
-### Thanks to
+## Thanks to
 
 - [RealTheSunCat](https://github.com/RealTheSunCat/Minecraft-Classic-Reversed), who documented large parts of the code.  
 - Alawnely, who has [this great video](https://www.youtube.com/watch?v=SFom-RNcLps&t=586s) about modding js0.23
 - The js0.23 modding community
 
-### Takedown
+## Takedown
 
 This project is just meant as a fun thing to make. If it needs to be taken down  
 for legal reasons, please create a new issue at the issues tab.
