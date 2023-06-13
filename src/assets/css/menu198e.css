@@ -1,84 +1,92 @@
 @font-face {
-    font-family: 'Minecraft';
-    src: url("../fonts/minecraftfont.eot");
-    src: url("../fonts/minecraftfont.woff") format("woff"), url("../fonts/minecraftfont.ttf") format("truetype"); }
+  font-family: "Minecraft";
+  src: url("../fonts/minecraftfont.eot");
+  src: url("../fonts/minecraftfont.woff") format("woff"),
+    url("../fonts/minecraftfont.ttf") format("truetype");
+}
 
-html, body {
-    overflow: hidden;
-    font-family: Minecraft, sans-serif;
-    height: 100%;
-    margin:0;
-    color: white;
-    position: relative;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+html,
+body {
+  overflow: hidden;
+  font-family: Minecraft, sans-serif;
+  height: 100%;
+  margin: 0;
+  color: white;
+  position: relative;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
 iframe {
-    height: 100%;
-    width: 100%;
-    border: none;
-    background-color:#ffffff00;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #ffffff00;
 }
 
-.newgame, .newgame-old .options, .menu, .credits {
-    display: none;
+.newgame,
+.newgame-old .options,
+.menu,
+.credits {
+  display: none;
 }
 
 body:before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: url("../textures/modded/dirt.png");
-    filter: brightness(0.35);
-    background-size: 128px 128px;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    z-index: -10;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../textures/modded/dirt.png");
+  filter: brightness(0.35);
+  background-size: 128px 128px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  z-index: -10;
 }
 
 .page-content {
-    height: 100%;
-    width: 100%;
-    position: relative;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .version {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
 
 .btn {
-    position: relative;
-    text-align: center;
-    width: 700px;
-    height: 70px;
-    cursor: default !important;
-    color: white;
-    margin-bottom: 15px;
-    background-image: url("../textures/modded/button.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+  position: relative;
+  text-align: center;
+  width: 700px;
+  height: 70px;
+  cursor: default !important;
+  color: white;
+  margin-bottom: 15px;
+  background-image: url("../textures/modded/button.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 /* .newgame .btn {
@@ -86,157 +94,169 @@ main {
 } */
 
 .btn:hover {
-    color: #FFFFA0;
-    background-image: url("../textures/modded/button_over.png");
+  color: #ffffa0;
+  background-image: url("../textures/modded/button_over.png");
 }
 
 .btn.disabled {
-    color: #E0E0E0;
-    background-image: url("../textures/modded/button_disabled.png");
+  color: #e0e0e0;
+  background-image: url("../textures/modded/button_disabled.png");
 }
 
 .btn-bottom {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .btn-text:before {
-    position: absolute;
-    top: 25%; left: 0;
-    width: 100%; height: 100%;
-    z-index: 3;
-    font-size: 25px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  font-size: 25px;
 }
 .btn-text {
-    position: absolute;
-    top: 25%; left: 0;
-    width: 100%; height: 100%;
-    z-index: 3;
-    font-size: 25px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  font-size: 25px;
 }
 
 .btn-input {
-    width:100%;
-    height:100%;
-    font-size: 25px;
-    text-align: center;
-    font-family: Minecraft, sans-serif;
-    color: white;
-    background-color: #000000;
-    border-style: solid;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  text-align: center;
+  font-family: Minecraft, sans-serif;
+  color: white;
+  background-color: #000000;
+  border-style: solid;
 }
 
 .btn img {
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    position: absolute;
-    z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
-p, h1, h2, span {
-    position: relative;
-    font-size: 25px;
-    font-weight: normal;
+p,
+h1,
+h2,
+span {
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 h1 {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-p:before, h1:before, h2:before, span:before {
-    content:attr(data-text);
-    position: absolute; 
-    top: 3px;
-    left: 3px;
-    width: 100%;
-    height: 100%;
-    color: #3F3F3F;
-    z-index: -1 !important;
+p:before,
+h1:before,
+h2:before,
+span:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  color: #3f3f3f;
+  z-index: -1 !important;
 }
 
 .logo {
-    width: 900px;
-    margin-bottom: 100px;
-    height: 147px;
-    position: relative;
+  width: 900px;
+  margin-bottom: 100px;
+  height: 147px;
+  position: relative;
 }
 .logo img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .pulse {
-    -webkit-animation: puls 1s cubic-bezier(.46,.03,.52,.96);
-    -webkit-animation-iteration-count: infinite;
-    animation: pulse 1s cubic-bezier(.46,.03,.52,.96);
-    animation-iteration-count: infinite;
+  -webkit-animation: puls 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -webkit-animation-iteration-count: infinite;
+  animation: pulse 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes pulse {
-    0% {
-        transform: scale(1) rotate(-25deg);
-    }
-    50% {
-        transform: scale(1.2) rotate(-25deg);
-    }
-    100% {
-        transform: scale(1) rotate(-25deg);
-    }
+  0% {
+    transform: scale(1) rotate(-25deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-25deg);
+  }
+  100% {
+    transform: scale(1) rotate(-25deg);
+  }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1) rotate(-25deg);
-    }
-    50% {
-        transform: scale(1.2) rotate(-25deg);
-    }
-    100% {
-        transform: scale(1) rotate(-25deg);
-    }
+  0% {
+    transform: scale(1) rotate(-25deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-25deg);
+  }
+  100% {
+    transform: scale(1) rotate(-25deg);
+  }
 }
 
 .splash {
-    position: absolute;
-    color: yellow;
-    right: 10px;
-    bottom: 20px;
-    font-size: 33px;
+  position: absolute;
+  color: yellow;
+  right: 10px;
+  bottom: 20px;
+  font-size: 33px;
 }
 
 .splash::after {
-    content: "!";
+  content: "!";
 }
 
 .bold {
-    font-weight: bolder !important;
+  font-weight: bolder !important;
 }
 
 .credits main {
-    display: block;
-    text-align: center;
-    overflow-y: auto;
-    margin:auto;
-    margin-top: 50px;
-    max-width: 95%;
-    max-height: 80%;
-    overflow-wrap: break-word;
-    padding-bottom: 300px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  display: block;
+  text-align: center;
+  overflow-y: auto;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 95%;
+  max-height: 80%;
+  overflow-wrap: break-word;
+  padding-bottom: 300px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .credits main::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
-    .credits main {
-        max-width: 60%;
-    }
+  .credits main {
+    max-width: 60%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .credits main {
-        max-width: 95%;
-    }
+  .credits main {
+    max-width: 95%;
+  }
 }

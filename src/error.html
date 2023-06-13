@@ -1,69 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="sv-SE"> <![endif]-->
 <!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" lang="sv-SE"> <![endif]-->
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" lang="sv-SE"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="sv-SE" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
-<head>
-    <meta charset="UTF-8"/>
+<html class="no-js" lang="sv-SE" prefix="og: http://ogp.me/ns#">
+  <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
 
     <title>Minecraft Classic 0.0.23a_01</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="google" content="notranslate" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <link href="assets/css/menu198e.css?4e4e005077c1d4940468" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="apple-mobile-web-app-title" content="Classic">
-    <meta name="application-name" content="Classic">
-    <meta name="msapplication-TileColor" content="#2b2b2b">
-    <meta name="theme-color" content="#2b2b2b">
-    <meta name="robots" content="noindex">
-</head>
-<body>
-
-<div class="page-content">
-
-    <div class="page-content oops">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link
+      href="assets/css/menu198e.css?4e4e005077c1d4940468"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Classic" />
+    <meta name="application-name" content="Classic" />
+    <meta name="msapplication-TileColor" content="#2b2b2b" />
+    <meta name="theme-color" content="#2b2b2b" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="page-content oops">
         <main role="main" class="u-main">
-            <p id='msg' data-text="Oops! Something went wrong!">Oops! Something went wrong!</p>
-            <a onclick="ok()" class="btn"><div class="btn-text"><span data-text="OK" id="fullBtn">OK</span></div></a>
+          <p id="msg" data-text="Oops! Something went wrong!">
+            Oops! Something went wrong!
+          </p>
+          <a onclick="ok()" class="btn"
+            ><div class="btn-text">
+              <span data-text="OK" id="fullBtn">OK</span>
+            </div></a
+          >
         </main>
+      </div>
     </div>
-</div>
 
-<script>
-    let params = new URLSearchParams(location.search);
-    var err = params.get('error');
-    console.log("Error occurred. Code:")
-    console.log(err);
-    var msg = document.getElementById('msg');
-    var str = "An unknown error occurred. Error code: "+err;
+    <script>
+      let params = new URLSearchParams(location.search);
+      var err = params.get("error");
+      console.log("Error occurred. Code:");
+      console.log(err);
+      var msg = document.getElementById("msg");
+      var str = "An unknown error occurred. Error code: " + err;
 
-    if(err == null) {
+      if (err == null) {
         str = "An unknown error occurred. Error code was not specified.";
-    }
+      }
 
-    if(err == "seedInt") {
+      if (err == "seedInt") {
         str = "Seed must be a interger!";
-    }
+      }
 
-    msg.innerText = str;
-    msg.setAttribute("data-text", str);
+      msg.innerText = str;
+      msg.setAttribute("data-text", str);
 
-    function ok() {
-        var audio = new Audio('assets/sounds/click.mp3');
+      function ok() {
+        var audio = new Audio("assets/sounds/click.mp3");
         audio.play();
 
-        setTimeout(() => { 
-            window.location = "menu.html";
+        setTimeout(() => {
+          window.location = "menu.html";
         }, 250);
-    }
-     
-</script>
-
+      }
+    </script>
+  </body>
 </html>
