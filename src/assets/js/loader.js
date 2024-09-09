@@ -2,7 +2,7 @@ var script = document.createElement("script");  // create a script DOM node
 const localStorage = window.localStorage;
 
 if(localStorage.getItem("modded") === null) {
-    localStorage.setItem("modded", "false");
+    localStorage.setItem("modded", "true");
 } 
 
 if(localStorage.getItem("modded") === "true") {

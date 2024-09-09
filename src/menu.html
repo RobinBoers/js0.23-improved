@@ -377,7 +377,7 @@
           (localStorage.getItem("fullscreen") === null ||
             localStorage.getItem("fullscreen") === "false") &&
           (localStorage.getItem("modded") === null ||
-            localStorage.getItem("modded") === "false")
+            localStorage.getItem("modded") === "true")
         ) {
           restBtn.setAttribute("onclick", "");
           restBtn.setAttribute("class", "btn disabled");
@@ -391,7 +391,7 @@
         }
 
         if (localStorage.getItem("modded") === null) {
-          localStorage.setItem("modded", "false");
+          localStorage.setItem("modded", "true");
         }
 
         checkForFullscreen();
