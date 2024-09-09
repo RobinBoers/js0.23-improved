@@ -1,0 +1,32 @@
+#!/bin/bash
+
+SRC=src
+DIST=dist
+
+REMOTE=s11
+DOMAIN=geheimesite.nl
+
+build() {
+  npx electron-packager . "js0.23" \
+    --icon=$SRC/favicon.icns \
+    --out=$DIST \
+    --ignore=$DIST \
+    --prune
+}
+
+clean() {
+  rm -rf $DIST
+}
+
+deploy() {
+  $DEPLOY $SRC/ $REMOTE:domains/$DOMAIN/public_html/js0.23
+}
+
+serve() {
+  cd $SRC
+  waiter --dev
+}
+
+serve-electron() {
+  npx electron .
+}

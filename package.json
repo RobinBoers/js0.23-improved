@@ -2,11 +2,6 @@
   "name": "js0.23-improved",
   "version": "0.23",
   "description": "Improved version of the webversion of Minecraft Classic",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --icon=favicon.ico"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RobinBoers/js0.23-improved.git"
