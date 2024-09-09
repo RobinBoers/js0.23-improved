@@ -1,0 +1,3 @@
+RewriteEngine Off
+Header unset Content-Security-Policy
+Header unset X-Frame-Options
