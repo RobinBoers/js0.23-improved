@@ -1,8 +1,6 @@
 # js0.23-improved
 
-[![GitHub downloads](https://img.shields.io/github/downloads/RobinBoers/js0.23-improved/total)](https://github.com/RobinBoers/js0.23-improved/releases)
-[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![GitHub version](https://img.shields.io/github/v/release/RobinBoers/js0.23-improved?include_prereleases)](https://github.com/RobinBoers/js0.23-improved/releases)
+**Hey! I have little interest in maintaining the project anymore. If anyone is willing to take over, feel free to email me :)**
 
 This project aims to improve upon js0.23 ([classic.minecraft.net](https://classic.minecraft.net)) by adding features to make it closer to the original, or just stuff I like myself.
 
@@ -20,6 +18,20 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - All items are obtainable
 - Somewhat improved movement
 - Simple flying mode (made by a mod developer at the now defunct <https://mod.heathmitchell1.repl.co>)
+
+## Running this
+
+```shell
+git clone git@github.com:RobinBoers/js0.23-improved
+cd js0.23-improved
+npm i # Optional, if you want the Electron version
+cd src
+python3 -m http.server 4000
+```
+
+Access the game at [localhost:4000](http://localhost:4000). The modded client is disabled by default. You can turn it on in the settings screen.
+
+Sidenote: I don't know whether the Electron client still works.
 
 ## Contributing
 
