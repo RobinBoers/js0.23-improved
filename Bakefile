@@ -19,7 +19,7 @@ clean() {
 }
 
 deploy() {
-  $DEPLOY $SRC/ $REMOTE:domains/$DOMAIN/public_html/js0.23
+  lift deploy
 }
 
 serve() {
@@ -27,6 +27,6 @@ serve() {
   waiter --dev
 }
 
-serve-electron() {
+run() {
   npx electron .
 }

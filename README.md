@@ -19,6 +19,8 @@ This project aims to improve upon js0.23 ([classic.minecraft.net](https://classi
 - Somewhat improved movement
 - Simple flying mode (made by a mod developer at the now defunct <https://mod.heathmitchell1.repl.co>)
 
+There is a demo at [geheimesite.nl/js0.23](https://geheimesite.nl/js0.23), if you wanna try it out quickly :)
+
 ## Running this
 
 ```shell
